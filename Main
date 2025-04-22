@@ -1,5 +1,16 @@
+local PlaceId = game["PlaceId\0"]
+if PlaceId == 142823291 or PlaceId == 335132309 or PlaceId == 636649648 then
     if script_key and script_key ~= "" then
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/75128ac7f49f9c3017533547d8e13046.lua"))()
     else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/ArrayField/main/MyArrayV6"))()
     end
+elseif PlaceId == 920587237 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/AdoptMe'))()
+else
+    local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+    Fluent:Notify({ Title = "Highlight Hub", Content = "This game isn't supported.", Duration = 3 })
+    task.wait(3)
+    Fluent:Destroy()
+    return
+end
